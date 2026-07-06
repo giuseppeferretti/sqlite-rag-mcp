@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sqlite-rag-mcp"
+version = "0.1.0"
+description = "100% offline RAG as an MCP server — SQLite + sqlite-vec + FTS5 hybrid search with local Ollama embeddings"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Giuseppe Ferretti", email = "giuseppe@iterlabs.com.br" }]
+requires-python = ">=3.10"
+keywords = ["mcp", "rag", "sqlite", "sqlite-vec", "fts5", "ollama", "offline", "search"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Indexing",
+]
+dependencies = [
+    "mcp>=1.2.0",
+    "sqlite-vec>=0.1.6",
+    "ollama>=0.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+]
+
+[project.scripts]
+sqlite-rag-mcp = "sqlite_rag_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sqlite_rag_mcp"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[project.urls]
+Homepage = "https://github.com/giuseppeferretti/sqlite-rag-mcp"
