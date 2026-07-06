@@ -121,7 +121,7 @@ python -m sqlite_rag_mcp.index ~/docs --glob "**/*.txt" --db /tmp/docs.db
 
 ### Provenance
 
-This server is the extracted, genericized search core of a production RAG system that indexes and answers questions over a company's document corpus — fully offline, on commodity hardware. Case study at [iterlabs.com.br](https://iterlabs.com.br).
+This server is the extracted, genericized search core of a production RAG system that indexes and answers questions over a company's document corpus — fully offline, on commodity hardware. Case study at [portfolio.iterlabs.com.br](https://portfolio.iterlabs.com.br).
 
 ### Development
 
@@ -177,7 +177,7 @@ CLI: `python -m sqlite_rag_mcp.index <dir> --glob "**/*.md"`.
 
 ### Origem
 
-Núcleo de busca extraído e generalizado de um sistema RAG em produção que responde perguntas sobre o corpus documental de uma empresa — totalmente offline. Case em [iterlabs.com.br](https://iterlabs.com.br).
+Núcleo de busca extraído e generalizado de um sistema RAG em produção que responde perguntas sobre o corpus documental de uma empresa — totalmente offline. Case em [portfolio.iterlabs.com.br](https://portfolio.iterlabs.com.br).
 
 ---
 
